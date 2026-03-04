@@ -1,2 +1,3 @@
 ﻿// en proceso =D 
-Console.WriteLine("Hello, World!");
+string name = "mario";
+Console.WriteLine($"Hello,{name}");
