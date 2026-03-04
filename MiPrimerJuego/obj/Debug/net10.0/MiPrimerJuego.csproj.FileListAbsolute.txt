@@ -1,0 +1,14 @@
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\bin\Debug\net10.0\MiPrimerJuego.exe
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\bin\Debug\net10.0\MiPrimerJuego.deps.json
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\bin\Debug\net10.0\MiPrimerJuego.runtimeconfig.json
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\bin\Debug\net10.0\MiPrimerJuego.dll
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\bin\Debug\net10.0\MiPrimerJuego.pdb
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\obj\Debug\net10.0\MiPrimerJuego.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\obj\Debug\net10.0\MiPrimerJuego.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\obj\Debug\net10.0\MiPrimerJuego.AssemblyInfo.cs
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\obj\Debug\net10.0\MiPrimerJuego.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\obj\Debug\net10.0\MiPrimerJuego.dll
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\obj\Debug\net10.0\refint\MiPrimerJuego.dll
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\obj\Debug\net10.0\MiPrimerJuego.pdb
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\obj\Debug\net10.0\MiPrimerJuego.genruntimeconfig.cache
+C:\Users\HP\Desktop\MiPrimerJuego\MiPrimerJuego\obj\Debug\net10.0\ref\MiPrimerJuego.dll
