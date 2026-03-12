@@ -1,1 +1,0 @@
-# este archivo es para git y github 
