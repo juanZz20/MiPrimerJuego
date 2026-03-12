@@ -1,3 +1,5 @@
+using System.IO.Pipelines;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // 1. SERVICIOS
@@ -26,21 +28,18 @@ app.UseHttpsRedirection();
 app.UseCors("NuevaPolitica");
 
 // 3. RUTAS
-var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
+var tareas = new List<Tarea> {new Tarea(1, "aprender c#"),new Tarea(2,"aprender react") };
 
 //creacion de rutas
-app.MapGet("/weatherforecast", () =>
+app.MapGet("/api/tareas",() => tareas);
+
+app.MapPost("/api/tareas", (Tarea nuevaTarea) =>
 {
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    var tarea = nuevaTarea with{Id = tareas.Count +1 };
+    tareas.Add(tarea);
+    return Results.Ok(tarea);
 });
+
 
 app.MapGet("/api/saludo", () => new { mensaje = "¡Conexión exitosa!", usuario = "Carito" });
 
@@ -48,7 +47,4 @@ app.MapGet("/api/saludo", () => new { mensaje = "¡Conexión exitosa!", usuario 
 app.Run();
 
 // Definición del objeto para el clima
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+record Tarea(int Id, string Nombre);
