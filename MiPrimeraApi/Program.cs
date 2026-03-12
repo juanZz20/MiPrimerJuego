@@ -40,8 +40,24 @@ app.MapPost("/api/tareas", (Tarea nuevaTarea) =>
     return Results.Ok(tarea);
 });
 
+app.MapDelete("/api/tareas/{id}",(int id) =>
+{
+    var tareaEliminada = tareas.FirstOrDefault(t => t.Id ==id);
+    if(tareaEliminada == null) return Results.NotFound();
+    tareas.Remove(tareaEliminada);
+    return Results.Ok(new {mensaje= "tarea eliminada", id});
+}) ;
 
-app.MapGet("/api/saludo", () => new { mensaje = "¡Conexión exitosa!", usuario = "Carito" });
+app.MapPut("/api/tareas/{id}", (int id, Tarea tareaEditada) =>
+{
+    var index = tareas.FindIndex(t => t.Id == id);
+    if (index == -1) return Results.NotFound();
+
+    // Actualizamos la tarea en la lista
+    tareas[index] = tareaEditada with { Id = id };
+    return Results.Ok(tareas[index]);
+});
+//app.MapGet("/api/saludo", () => new { mensaje = "¡Conexión exitosa!", usuario = "Carito" });
 
 // esta linea hace que el servidor pueda arrancar
 app.Run();
